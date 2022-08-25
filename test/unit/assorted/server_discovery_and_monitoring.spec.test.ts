@@ -5,7 +5,7 @@ import * as path from 'path';
 import * as sinon from 'sinon';
 import { promisify } from 'util';
 
-import { ConnectionPool } from '../../../src/cmap/connection_pool';
+import { ConnectionPool } from '../../mongodb';
 import {
   HEARTBEAT_EVENTS,
   SERVER_CLOSED,
@@ -14,14 +14,14 @@ import {
   TOPOLOGY_CLOSED,
   TOPOLOGY_DESCRIPTION_CHANGED,
   TOPOLOGY_OPENING
-} from '../../../src/constants';
+} from '../../mongodb';
 import {
   MongoCompatibilityError,
   MongoNetworkError,
   MongoNetworkTimeoutError,
   MongoServerError
-} from '../../../src/error';
-import { MongoClient } from '../../../src/mongo_client';
+} from '../../mongodb';
+import { MongoClient } from '../../mongodb';
 import {
   ServerClosedEvent,
   ServerDescriptionChangedEvent,
@@ -32,11 +32,11 @@ import {
   TopologyClosedEvent,
   TopologyDescriptionChangedEvent,
   TopologyOpeningEvent
-} from '../../../src/sdam/events';
-import { Server } from '../../../src/sdam/server';
-import { ServerDescription, TopologyVersion } from '../../../src/sdam/server_description';
-import { Topology } from '../../../src/sdam/topology';
-import { isRecord, ns } from '../../../src/utils';
+} from '../../mongodb';
+import { Server } from '../../mongodb';
+import { ServerDescription, TopologyVersion } from '../../mongodb';
+import { Topology } from '../../mongodb';
+import { isRecord, ns } from '../../mongodb';
 import { ejson } from '../../tools/utils';
 
 const SDAM_EVENT_CLASSES = {

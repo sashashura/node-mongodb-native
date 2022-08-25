@@ -62,6 +62,7 @@ lib/
 # type definition tests
 !test/types
 !global.d.ts
+!test/mongodb.d.ts
 
 .vscode
 output

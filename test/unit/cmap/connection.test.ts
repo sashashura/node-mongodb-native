@@ -4,11 +4,11 @@ import { Socket } from 'net';
 import * as sinon from 'sinon';
 import { setTimeout } from 'timers';
 
-import { connect } from '../../../src/cmap/connect';
-import { Connection, hasSessionSupport } from '../../../src/cmap/connection';
-import { MessageStream } from '../../../src/cmap/message_stream';
-import { MongoNetworkTimeoutError } from '../../../src/error';
-import { isHello, ns } from '../../../src/utils';
+import { connect } from '../../mongodb';
+import { Connection, hasSessionSupport } from '../../mongodb';
+import { MessageStream } from '../../mongodb';
+import { MongoNetworkTimeoutError } from '../../mongodb';
+import { isHello, ns } from '../../mongodb';
 import * as mock from '../../tools/mongodb-mock/index';
 import { getSymbolFrom } from '../../tools/utils';
 import { createTimerSandbox } from '../timer_sandbox';

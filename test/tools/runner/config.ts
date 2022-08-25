@@ -3,11 +3,14 @@ import ConnectionString from 'mongodb-connection-string-url';
 import * as qs from 'querystring';
 import * as url from 'url';
 
-import { AuthMechanism, WriteConcernSettings } from '../../../src';
-import { MongoClient } from '../../../src/mongo_client';
-import { TopologyType } from '../../../src/sdam/common';
-import { Topology } from '../../../src/sdam/topology';
-import { HostAddress } from '../../../src/utils';
+import {
+  AuthMechanism,
+  HostAddress,
+  MongoClient,
+  Topology,
+  TopologyType,
+  WriteConcernSettings
+} from '../../mongodb';
 import { getEnvironmentalOptions } from '../utils';
 
 interface ProxyParams {

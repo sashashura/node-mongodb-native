@@ -1,6 +1,6 @@
 'use strict';
 const { assert: test, setupDatabase } = require('../shared');
-const { Code } = require('../../../src');
+const { Code } = require('../../mongodb');
 const { expect } = require('chai');
 
 describe('MapReduce', function () {

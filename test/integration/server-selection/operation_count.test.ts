@@ -1,8 +1,7 @@
 import { expect } from 'chai';
 import * as sinon from 'sinon';
 
-import { AbstractCursor, Collection, MongoClient } from '../../../src';
-import { ConnectionPool } from '../../../src/cmap/connection_pool';
+import { AbstractCursor, Collection, ConnectionPool, MongoClient } from '../../mongodb';
 import { FailPoint } from '../../tools/utils';
 
 const testMetadata: MongoDBMetadataUI = {

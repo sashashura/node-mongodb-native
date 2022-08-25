@@ -1,9 +1,9 @@
-import { FindCursor, MongoClient, ServerApiVersion } from '../../../src';
-import type { Document, ObjectId } from '../../../src/bson';
-import type { ReadConcernLevel } from '../../../src/read_concern';
-import type { ReadPreferenceMode } from '../../../src/read_preference';
-import type { TagSet } from '../../../src/sdam/server_description';
-import type { W } from '../../../src/write_concern';
+import { FindCursor, MongoClient, ServerApiVersion } from '../../mongodb';
+import type { Document, ObjectId } from '../../mongodb';
+import type { ReadConcernLevel } from '../../mongodb';
+import type { ReadPreferenceMode } from '../../mongodb';
+import type { TagSet } from '../../mongodb';
+import type { W } from '../../mongodb';
 import { TestConfiguration } from '../runner/config';
 
 export const SupportedVersion = '^1.0';

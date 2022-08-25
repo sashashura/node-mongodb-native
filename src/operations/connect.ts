@@ -5,7 +5,7 @@ import type { MongoClient, MongoOptions } from '../mongo_client';
 import { Topology } from '../sdam/topology';
 import type { Callback } from '../utils';
 
-export function connect(
+export function connectClient(
   mongoClient: MongoClient,
   options: MongoOptions,
   callback: Callback<MongoClient>

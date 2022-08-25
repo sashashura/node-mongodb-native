@@ -4,7 +4,7 @@ import { setTimeout } from 'timers';
 import {
   PoolClosedError as MongoPoolClosedError,
   WaitQueueTimeoutError as MongoWaitQueueTimeoutError
-} from '../../src/cmap/errors';
+} from '../mongodb';
 import {
   isResumableError,
   isRetryableReadError,
@@ -17,8 +17,8 @@ import {
   MongoSystemError,
   needsRetryableWriteLabel,
   NODE_IS_RECOVERING_ERROR_MESSAGE
-} from '../../src/error';
-import * as importsFromErrorSrc from '../../src/error';
+} from '../mongodb';
+import * as importsFromErrorSrc from '../mongodb';
 import {
   MongoError,
   MongoNetworkError,
@@ -26,10 +26,10 @@ import {
   MongoServerError,
   MongoWriteConcernError,
   TopologyDescription
-} from '../../src/index';
-import * as importsFromEntryPoint from '../../src/index';
-import { Topology, TopologyOptions } from '../../src/sdam/topology';
-import { isHello, ns, setDifference } from '../../src/utils';
+} from '../mongodb';
+import * as importsFromEntryPoint from '../mongodb';
+import { Topology, TopologyOptions } from '../mongodb';
+import { isHello, ns, setDifference } from '../mongodb';
 import { ReplSetFixture } from '../tools/common';
 import { cleanup } from '../tools/mongodb-mock/index';
 import { getSymbolFrom } from '../tools/utils';

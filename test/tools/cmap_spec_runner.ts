@@ -2,9 +2,14 @@ import { expect } from 'chai';
 import { EventEmitter } from 'events';
 import { promisify } from 'util';
 
-import { Connection, HostAddress, MongoClient } from '../../src';
-import { ConnectionPool, ConnectionPoolOptions } from '../../src/cmap/connection_pool';
-import { shuffle } from '../../src/utils';
+import {
+  Connection,
+  ConnectionPool,
+  ConnectionPoolOptions,
+  HostAddress,
+  MongoClient,
+  shuffle
+} from '../mongodb';
 import { isAnyRequirementSatisfied } from './unified-spec-runner/unified-utils';
 import { FailPoint, sleep } from './utils';
 

@@ -1,7 +1,7 @@
 'use strict';
 var expect = require('chai').expect;
 const { setupDatabase } = require('../shared');
-const { Binary } = require('../../../src');
+const { Binary } = require('../../mongodb');
 const { setTimeout, setImmediate } = require('timers');
 
 describe('Cursor Streams', function () {

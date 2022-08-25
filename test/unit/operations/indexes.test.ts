@@ -4,8 +4,8 @@ import {
   CreateIndexesOptions,
   CreateIndexOperation,
   IndexDirection
-} from '../../../src/operations/indexes';
-import { ns } from '../../../src/utils';
+} from '../../mongodb';
+import { ns } from '../../mongodb';
 
 describe('class CreateIndexOperation', () => {
   const testCases = [

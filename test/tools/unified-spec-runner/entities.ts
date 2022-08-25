@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { expect } from 'chai';
 
-import { ChangeStream } from '../../../src/change_stream';
+import { ChangeStream } from '../../mongodb';
 import {
   CommandFailedEvent,
   CommandStartedEvent,
   CommandSucceededEvent
-} from '../../../src/cmap/command_monitoring_events';
+} from '../../mongodb';
 import {
   ConnectionCheckedInEvent,
   ConnectionCheckedOutEvent,
@@ -18,7 +18,7 @@ import {
   ConnectionPoolClosedEvent,
   ConnectionPoolCreatedEvent,
   ConnectionReadyEvent
-} from '../../../src/cmap/connection_pool_events';
+} from '../../mongodb';
 import {
   AbstractCursor,
   Collection,
@@ -28,11 +28,11 @@ import {
   HostAddress,
   MongoClient,
   MongoCredentials
-} from '../../../src/index';
-import { ReadConcern } from '../../../src/read_concern';
-import { ReadPreference } from '../../../src/read_preference';
-import { ClientSession } from '../../../src/sessions';
-import { WriteConcern } from '../../../src/write_concern';
+} from '../../mongodb';
+import { ReadConcern } from '../../mongodb';
+import { ReadPreference } from '../../mongodb';
+import { ClientSession } from '../../mongodb';
+import { WriteConcern } from '../../mongodb';
 import { ejson, getEnvironmentalOptions } from '../../tools/utils';
 import type { TestConfiguration } from '../runner/config';
 import { trace } from './runner';

@@ -2,9 +2,7 @@ import { expect } from 'chai';
 import { setTimeout } from 'timers';
 import { promisify } from 'util';
 
-import { CommandStartedEvent } from '../../../src';
-import { Collection } from '../../../src/collection';
-import { MongoClient } from '../../../src/mongo_client';
+import { Collection, CommandStartedEvent, MongoClient } from '../../mongodb';
 
 const failPoint = {
   configureFailPoint: 'failCommand',

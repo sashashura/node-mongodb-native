@@ -2,7 +2,7 @@
 const { assert: test, setupDatabase } = require('../shared');
 const { setTimeout } = require('timers');
 const { format: f } = require('util');
-const { Code, ObjectId, ReturnDocument } = require('../../../src');
+const { Code, ObjectId, ReturnDocument } = require('../../mongodb');
 
 const chai = require('chai');
 const { skipBrokenAuthTestBeforeEachHook } = require('../../tools/runner/hooks/configuration');

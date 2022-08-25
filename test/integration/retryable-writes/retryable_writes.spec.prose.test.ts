@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 
-import { MongoError, MongoServerError, TopologyType } from '../../../src';
+import { MongoError, MongoServerError, TopologyType } from '../../mongodb';
 
 describe('Retryable Writes Spec Prose', () => {
   /**

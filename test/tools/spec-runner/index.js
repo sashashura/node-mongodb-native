@@ -5,10 +5,10 @@ const chai = require('chai');
 
 const expect = chai.expect;
 const { EJSON } = require('bson');
-const { isRecord } = require('../../../src/utils');
+const { isRecord } = require('../../mongodb');
 const TestRunnerContext = require('./context').TestRunnerContext;
 const resolveConnectionString = require('./utils').resolveConnectionString;
-const { LEGACY_HELLO_COMMAND } = require('../../../src/constants');
+const { LEGACY_HELLO_COMMAND } = require('../../mongodb');
 const { isAnyRequirementSatisfied } = require('../unified-spec-runner/unified-utils');
 const ClientSideEncryptionFilter = require('../runner/filters/client_encryption_filter');
 
@@ -912,7 +912,9 @@ function testOperation(operation, obj, context, options) {
         throw new Error(`Unknown operation "${operationName}"`);
       }
       // wrap this in a `promiseTry` because some operations might throw
-      opPromise = promiseTry(() => obj[operationName].apply(obj, args));
+      opPromise = promiseTry(() => {
+        return obj[operationName].apply(obj, args);
+      });
     }
   }
 

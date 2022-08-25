@@ -6,16 +6,17 @@ import {
   CommandFailedEvent,
   CommandStartedEvent,
   CommandSucceededEvent,
+  Connection,
+  Db,
+  getTopology,
+  isHello,
   MongoClient,
   MongoNotConnectedError,
   MongoServerSelectionError,
-  ReadPreference
-} from '../../../src';
-import { Connection } from '../../../src/cmap/connection';
-import { Db } from '../../../src/db';
-import { ServerDescription } from '../../../src/sdam/server_description';
-import { Topology } from '../../../src/sdam/topology';
-import { getTopology, isHello } from '../../../src/utils';
+  ReadPreference,
+  ServerDescription,
+  Topology
+} from '../../mongodb';
 import { runLater } from '../../tools/utils';
 import { setupDatabase } from '../shared';
 

@@ -2,9 +2,9 @@
 const { format: f } = require('util');
 const { assert: test, setupDatabase } = require('../shared');
 const { sleep: delay } = require('../../tools/utils');
-const { enumToString } = require('../../../src/utils');
-const { ProfilingLevel } = require('../../../src/operations/set_profiling_level');
-const { Code, ReturnDocument } = require('../../../src');
+const { enumToString } = require('../../mongodb');
+const { ProfilingLevel } = require('../../mongodb');
+const { Code, ReturnDocument } = require('../../mongodb');
 const { expect } = require('chai');
 const { skipBrokenAuthTestBeforeEachHook } = require('../../tools/runner/hooks/configuration');
 

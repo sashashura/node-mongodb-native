@@ -1,13 +1,13 @@
 'use strict';
 const { setTimeout } = require('timers');
 const mock = require('../../tools/mongodb-mock/index');
-const { ServerType } = require('../../../src/sdam/common');
-const { Topology } = require('../../../src/sdam/topology');
-const { Monitor } = require('../../../src/sdam/monitor');
+const { ServerType } = require('../../mongodb');
+const { Topology } = require('../../mongodb');
+const { Monitor } = require('../../mongodb');
 const { expect } = require('chai');
-const { ServerDescription } = require('../../../src/sdam/server_description');
-const { LEGACY_HELLO_COMMAND } = require('../../../src/constants');
-const { isHello } = require('../../../src/utils');
+const { ServerDescription } = require('../../mongodb');
+const { LEGACY_HELLO_COMMAND } = require('../../mongodb');
+const { isHello } = require('../../mongodb');
 
 class MockServer {
   constructor(options) {

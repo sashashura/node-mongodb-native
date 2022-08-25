@@ -1,5 +1,5 @@
 import type { Document } from '../bson';
-import { CommandOptions, Connection, DestroyOptions, GetMoreOptions } from '../cmap/connection';
+import { CommandOptions, Connection, DestroyOptions } from '../cmap/connection';
 import {
   ConnectionPool,
   ConnectionPoolEvents,
@@ -447,7 +447,7 @@ function makeOperationHandler(
   server: Server,
   connection: Connection,
   cmd: Document,
-  options: CommandOptions | GetMoreOptions | undefined,
+  options: CommandOptions | undefined,
   callback: Callback
 ): Callback {
   const session = options?.session;

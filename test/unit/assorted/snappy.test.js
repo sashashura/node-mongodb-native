@@ -5,8 +5,8 @@ const mock = require('../../tools/mongodb-mock/index');
 
 const snappy = optionalRequire('snappy');
 const snappyVersion = optionalRequire('snappy/package.json').version;
-const { MongoClient } = require('../../../src');
-const { isHello } = require('../../../src/utils');
+const { MongoClient } = require('../../mongodb');
+const { isHello } = require('../../mongodb');
 
 function optionalRequire(mod) {
   try {
@@ -54,7 +54,7 @@ describe('Compression', function () {
     });
 
     it('should define a version number on the optional import', function () {
-      const { Snappy, PKG_VERSION } = require('../../../src/deps');
+      const { Snappy, PKG_VERSION } = require('../../mongodb');
       const [major, minor, patch] = snappyVersion.split('.').map(n => +n);
       expect(Snappy).to.have.property(PKG_VERSION).that.is.an('object');
       expect(Snappy[PKG_VERSION]).to.have.property('major', major);

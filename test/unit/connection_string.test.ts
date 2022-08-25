@@ -3,16 +3,16 @@ import * as dns from 'dns';
 import * as sinon from 'sinon';
 import { promisify } from 'util';
 
-import { MongoCredentials } from '../../src/cmap/auth/mongo_credentials';
-import { AUTH_MECHS_AUTH_SRC_EXTERNAL, AuthMechanism } from '../../src/cmap/auth/providers';
-import { FEATURE_FLAGS, parseOptions, resolveSRVRecord } from '../../src/connection_string';
+import { MongoCredentials } from '../mongodb';
+import { AUTH_MECHS_AUTH_SRC_EXTERNAL, AuthMechanism } from '../mongodb';
+import { FEATURE_FLAGS, parseOptions, resolveSRVRecord } from '../mongodb';
 import {
   MongoAPIError,
   MongoDriverError,
   MongoInvalidArgumentError,
   MongoParseError
-} from '../../src/error';
-import { MongoClient, MongoOptions } from '../../src/mongo_client';
+} from '../mongodb';
+import { MongoClient, MongoOptions } from '../mongodb';
 
 describe('Connection String', function () {
   it('should not support auth passed with user', function () {

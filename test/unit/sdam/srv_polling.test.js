@@ -1,16 +1,16 @@
 'use strict';
 
-const { Topology } = require('../../../src/sdam/topology');
-const { TopologyDescription } = require('../../../src/sdam/topology_description');
-const { TopologyType } = require('../../../src/sdam/common');
-const { SrvPoller, SrvPollingEvent } = require('../../../src/sdam/srv_polling');
-const sdamEvents = require('../../../src/sdam/events');
+const { Topology } = require('../../mongodb');
+const { TopologyDescription } = require('../../mongodb');
+const { TopologyType } = require('../../mongodb');
+const { SrvPoller, SrvPollingEvent } = require('../../mongodb');
+const sdamEvents = require('../../mongodb');
 
 const dns = require('dns');
 const EventEmitter = require('events').EventEmitter;
 const chai = require('chai');
 const sinon = require('sinon');
-const { MongoDriverError } = require('../../../src/error');
+const { MongoDriverError } = require('../../mongodb');
 
 const expect = chai.expect;
 chai.use(require('sinon-chai'));

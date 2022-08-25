@@ -5,16 +5,16 @@ import { expect } from 'chai';
 import {
   AbstractCursor,
   Collection,
+  CommandStartedEvent,
   Db,
   Document,
   GridFSFile,
   MongoClient,
-  ObjectId
-} from '../../../src';
-import { CommandStartedEvent } from '../../../src/cmap/command_monitoring_events';
-import { ReadConcern } from '../../../src/read_concern';
-import { ReadPreference } from '../../../src/read_preference';
-import { WriteConcern } from '../../../src/write_concern';
+  ObjectId,
+  ReadConcern,
+  ReadPreference,
+  WriteConcern
+} from '../../mongodb';
 import { getSymbolFrom } from '../../tools/utils';
 import { EntitiesMap, UnifiedChangeStream } from './entities';
 import { expectErrorCheck, resultCheck } from './match';

@@ -2,10 +2,10 @@
 const { on, once } = require('events');
 const { Readable, Writable } = require('stream');
 
-const { MessageStream } = require('../../../src/cmap/message_stream');
-const { Msg } = require('../../../src/cmap/commands');
+const { MessageStream } = require('../../mongodb');
+const { Msg } = require('../../mongodb');
 const expect = require('chai').expect;
-const { LEGACY_HELLO_COMMAND } = require('../../../src/constants');
+const { LEGACY_HELLO_COMMAND } = require('../../mongodb');
 const { generateOpMsgBuffer } = require('../../tools/utils');
 
 function bufferToStream(buffer) {

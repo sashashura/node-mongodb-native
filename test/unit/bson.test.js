@@ -1,7 +1,7 @@
 'use strict';
 
 const { expect } = require('chai');
-const BSON = require('../../src/bson');
+const BSON = require('../mongodb');
 const { isBSONExtImported } = require('../tools/utils');
 
 describe('When importing BSON', function () {
@@ -81,7 +81,7 @@ describe('When importing BSON', function () {
 });
 
 describe('MongoDB export', () => {
-  const mongodb = require('../../src');
+  const mongodb = require('../mongodb');
   it('should include ObjectId', () =>
     expect(mongodb).to.have.property('ObjectId').that.is.a('function'));
   it('should include ObjectID', () =>

@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 import * as sinon from 'sinon';
 
-import { LEGACY_HELLO_COMMAND } from '../../src/constants';
-import { MongoRuntimeError } from '../../src/error';
+import { LEGACY_HELLO_COMMAND } from '../mongodb';
+import { MongoRuntimeError } from '../mongodb';
 import {
   BufferPool,
   eachAsync,
@@ -11,7 +11,7 @@ import {
   makeInterruptibleAsyncInterval,
   MongoDBNamespace,
   shuffle
-} from '../../src/utils';
+} from '../mongodb';
 import { createTimerSandbox } from './timer_sandbox';
 
 describe('driver utils', function () {

@@ -1,7 +1,7 @@
 'use strict';
 const { assert: test, setupDatabase } = require('../shared');
 const f = require('util').format;
-const { LEGACY_HELLO_COMMAND } = require('../../../src/constants');
+const { LEGACY_HELLO_COMMAND } = require('../../mongodb');
 
 class CustomPromise extends Promise {}
 CustomPromise.prototype.isCustomMongo = true;

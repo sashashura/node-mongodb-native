@@ -4,10 +4,10 @@ import { readdirSync, readFileSync } from 'fs';
 import { join } from 'path';
 import { promisify } from 'util';
 
-import { ReadPreference } from '../../../src/read_preference';
-import { ServerType, STATE_CONNECTED, TopologyType } from '../../../src/sdam/common';
-import { Server } from '../../../src/sdam/server';
-import { Topology } from '../../../src/sdam/topology';
+import { ReadPreference } from '../../mongodb';
+import { ServerType, STATE_CONNECTED, TopologyType } from '../../mongodb';
+import { Server } from '../../mongodb';
+import { Topology } from '../../mongodb';
 import { serverDescriptionFromDefinition } from './server_selection_spec_helper';
 
 interface ServerSelectionLatencyWindowTest {

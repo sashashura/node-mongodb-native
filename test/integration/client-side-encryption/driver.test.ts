@@ -2,8 +2,8 @@ import { EJSON, UUID } from 'bson';
 import { expect } from 'chai';
 import * as crypto from 'crypto';
 
-import { Collection, CommandStartedEvent, MongoClient } from '../../../src';
-import * as BSON from '../../../src/bson';
+import { Collection, CommandStartedEvent, MongoClient } from '../../mongodb';
+import * as BSON from '../../mongodb';
 import { ClientEncryption } from '../../tools/unified-spec-runner/schema';
 import { getEncryptExtraOptions } from '../../tools/utils';
 

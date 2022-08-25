@@ -2,8 +2,8 @@
 
 const mock = require('../../tools/mongodb-mock/index');
 const { expect } = require('chai');
-const { MongoServerSelectionError, MongoClient } = require('../../../src');
-const { isHello } = require('../../../src/utils');
+const { MongoServerSelectionError, MongoClient } = require('../../mongodb');
+const { isHello } = require('../../mongodb');
 
 const minCompatErrMsg = `minimum wire version ${
   Number.MAX_SAFE_INTEGER - 1

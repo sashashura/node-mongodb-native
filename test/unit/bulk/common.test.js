@@ -4,8 +4,8 @@
 'use strict';
 
 const { expect } = require('chai');
-const { mergeBatchResults } = require('../../../src/bulk/common');
-const { Timestamp, Long } = require('../../../src/bson');
+const { mergeBatchResults } = require('../../mongodb');
+const { Timestamp, Long } = require('../../mongodb');
 
 describe('bulk/common', function () {
   describe('#mergeBatchResults', function () {

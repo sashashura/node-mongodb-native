@@ -11,12 +11,12 @@ import {
   MongoServerError,
   ObjectId,
   OneOrMore
-} from '../../../src';
+} from '../../mongodb';
 import {
   CommandFailedEvent,
   CommandStartedEvent,
   CommandSucceededEvent
-} from '../../../src/cmap/command_monitoring_events';
+} from '../../mongodb';
 import {
   ConnectionCheckedInEvent,
   ConnectionCheckedOutEvent,
@@ -28,7 +28,7 @@ import {
   ConnectionPoolClosedEvent,
   ConnectionPoolCreatedEvent,
   ConnectionReadyEvent
-} from '../../../src/cmap/connection_pool_events';
+} from '../../mongodb';
 import { ejson } from '../utils';
 import { CmapEvent, CommandEvent, EntitiesMap } from './entities';
 import {

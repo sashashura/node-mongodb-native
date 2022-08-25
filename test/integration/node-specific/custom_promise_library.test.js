@@ -1,7 +1,7 @@
 'use strict';
 
 const { expect } = require('chai');
-const { PromiseProvider } = require('../../../src/promise_provider');
+const { PromiseProvider } = require('../../mongodb');
 
 class CustomPromise extends Promise {}
 CustomPromise.prototype.isCustomMongo = true;

@@ -4,13 +4,13 @@ const fs = require('fs');
 const { expect } = require('chai');
 const { promisify } = require('util');
 const { getSymbolFrom } = require('../tools/utils');
-const { parseOptions, resolveSRVRecord } = require('../../src/connection_string');
-const { ReadConcern } = require('../../src/read_concern');
-const { WriteConcern } = require('../../src/write_concern');
-const { ReadPreference } = require('../../src/read_preference');
-const { Logger } = require('../../src/logger');
-const { MongoCredentials } = require('../../src/cmap/auth/mongo_credentials');
-const { MongoClient, MongoParseError, ServerApiVersion } = require('../../src');
+const { parseOptions, resolveSRVRecord } = require('../mongodb');
+const { ReadConcern } = require('../mongodb');
+const { WriteConcern } = require('../mongodb');
+const { ReadPreference } = require('../mongodb');
+const { Logger } = require('../mongodb');
+const { MongoCredentials } = require('../mongodb');
+const { MongoClient, MongoParseError, ServerApiVersion } = require('../mongodb');
 
 describe('MongoOptions', function () {
   it('MongoClient should always freeze public options', function () {

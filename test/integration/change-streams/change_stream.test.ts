@@ -14,14 +14,14 @@ import {
   Collection,
   CommandStartedEvent,
   Db,
+  isHello,
   Long,
   MongoChangeStreamError,
   MongoClient,
   MongoServerError,
   ReadPreference,
   ResumeToken
-} from '../../../src';
-import { isHello } from '../../../src/utils';
+} from '../../mongodb';
 import * as mock from '../../tools/mongodb-mock/index';
 import {
   FailPoint,

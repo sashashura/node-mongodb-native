@@ -9,10 +9,10 @@ import {
   CollectionOptions,
   DbOptions,
   Document,
+  getMongoDBClientEncryption,
   MongoClient,
   MongoMissingDependencyError
-} from '../../../src';
-import { getMongoDBClientEncryption } from '../../../src/utils';
+} from '../../mongodb';
 import { shouldRunServerlessTest } from '../../tools/utils';
 import { EntitiesMap } from './entities';
 import type {
@@ -218,7 +218,7 @@ export function getClientEncryptionClass(): ClientEncryption {
     }
 
     // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const { ClientEncryption } = mongodbClientEncryption.extension(require('../../../src/index'));
+    const { ClientEncryption } = mongodbClientEncryption.extension(require('../../mongodb'));
     return ClientEncryption;
   } catch {
     throw new MongoMissingDependencyError(
