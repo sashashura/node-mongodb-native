@@ -351,6 +351,8 @@ type ErrorHandlerEventName = typeof SOCKET_ERROR_EVENT_LIST[number] | 'cancel';
 const SOCKET_ERROR_EVENTS = new Set(SOCKET_ERROR_EVENT_LIST);
 
 function makeConnection(options: MakeConnectionOptions, _callback: Callback<Stream>) {
+  // @ts-expect-error: for now...
+  const createWebsocket = options[Symbol.for('@@mdb.websocket')];
   const useTLS = options.tls ?? false;
   const keepAlive = options.keepAlive ?? true;
   const socketTimeoutMS = options.socketTimeoutMS ?? Reflect.get(options, 'socketTimeout') ?? 0;
@@ -394,6 +396,8 @@ function makeConnection(options: MakeConnectionOptions, _callback: Callback<Stre
     // so we only need to handle the non-TLS case here (where existingSocket
     // gives us all we need out of the box).
     socket = existingSocket;
+  } else if (typeof createWebsocket === 'function') {
+    socket = createWebsocket(options);
   } else {
     socket = net.createConnection(parseConnectOptions(options));
   }

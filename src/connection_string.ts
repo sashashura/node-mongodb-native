@@ -1274,4 +1274,7 @@ export const DEFAULT_OPTIONS = new CaseInsensitiveMap(
  * Set of permitted feature flags
  * @internal
  */
-export const FEATURE_FLAGS = new Set([Symbol.for('@@mdb.skipPingOnConnect')]);
+export const FEATURE_FLAGS = new Set([
+  Symbol.for('@@mdb.skipPingOnConnect'),
+  Symbol.for('@@mdb.websocket')
+]);
